@@ -1,0 +1,8 @@
+{
+  "name": "Yapay Zeka Destekli Modüler Platform",
+  "description": "A comprehensive modular platform for app building, crypto trading bots, and media management with AI assistance.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
