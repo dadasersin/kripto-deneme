@@ -11,6 +11,16 @@ export default defineConfig({
     port: 3000
   },
   build: {
-    outDir: 'dist'
-  }
+    // Render.com varsayılan olarak 'build' klasörünü bekler.
+    outDir: 'build',
+    // Parça boyutu uyarısını devre dışı bırakmak için limiti yükseltiyoruz.
+    chunkSizeWarningLimit: 2000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'recharts', 'lucide-react', '@google/genai'],
+        },
+      },
+    },
+  },
 });
